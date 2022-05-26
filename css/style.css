@@ -1,43 +1,69 @@
-/* Imported Typeface Files */
-
-@font-face {
-    font-family:Lato;
-    src: url(../fonts/lato-regular.ttf);
-    font-style:normal;
-    font-weight:normal;
+* {
+    box-sizing: border-box;
 }
-@font-face {
-
-    font-family:Alfa Slab One;
-    src: url(../fonts/alfa-slab-one-regular.ttf);
-    font-style:normal;
-    font-weight:normal;
-}
-
-
-/* Root */
 
 html {
     font-size:16px;
 }
 
-
-/* Body & Main  */
-
 body {
-    font-family:Lato, Arial, sans-serif;
-    font-size:1rem;
-    padding:1rem;
-    min-width:39rem;
-    max-width:50rem;
-    margin:0 auto;
+    margin: 1.5rem auto;
+    width:90%;
+    min-width:56.25rem;
 }
+
+/* Layout */
+
 main {
-    background-color:#ddd;
-    background-image:url(../images/wrinkled-white-paper-background.jpg);
-    background-size:cover;
-    background-repeat: no-repeat;
-    border:1px solid #333;
+    overflow:auto;
+    min-width:45rem;
+    
+}
+
+section {
+    float: left;
+    min-width: 22.5rem;
+    width:50%;
+}
+
+figure {
+    width:60%;
+    margin:0 10% 0 0;
+    float:left;
+}
+
+figure img {
+    width:100%;
+    max-width:25rem;
+}
+
+figcaption {
+    margin:.375rem 0;
+}
+
+.long-list {
+    margin-top:0;
+}
+
+nav {
+    float: left;
+    width:11.25rem;
+}
+
+footer {
+    clear: both;
+    margin-top:1.5rem;
+}
+
+section, aside, nav, footer {
+  padding: .5rem;
+}
+
+/* header and footer */
+
+header, footer {
+  border-top: .125rem solid #33658A;
+  border-bottom: .125rem solid #33658A;
 }
 
 /* ------ START WRITING YOUR CODE BELOW THIS LINE ------ */
@@ -51,119 +77,127 @@ main {
 /* NOTE: While you will be using some of the same CSS properties, the VALUES 
    may need to be different in order to style the page correctly. */
 
+/* Imported Typfaces */
 
-/* Headings  */
+@font-face {
+    font-family: Josefinslab;
+    src: url(../fonts/josefinslab-regular.ttf) format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    letter-spacing: 0.125rem;
+}
+@font-face {
+    font-family: Montserrat;
+    src: url(../fonts/montserrat-regular.ttf) format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Typography Styles */
+
+html {
+    font-family: Montserrat, Arial;
+}
 
 h1 {
-    text-transform: uppercase;
-    font-size:6rem;
-    margin: 0;
-    letter-spacing: .5rem;
-    color:darkred;
-    text-shadow:.09375rem .09375rem .09375rem #000;
-    font-family:'Alfa Slab One', Garamond, serif;
-    text-align:center;
+    font-size: 3.75rem;
+    margin: 1.125rem;
+    text-align: center;
+    font-family: Josefinslab;
 }
 
 h2 {
-    font-size: 3rem;
-    letter-spacing: .25rem;
-    font-weight: normal;
-    font-family:'Alfa Slab One', Garamond, serif;
-    text-align:center;
-    color:darkred;
-    text-shadow:.09375rem .09375rem .09375rem #000;
-    text-transform: uppercase;
-}
-
-h3 {
-    font-size: 2rem;
-    font-weight: normal;
-    font-family:'Alfa Slab One', Garamond, serif;
-    text-align:center;
-    color:black;
-    text-transform: uppercase;
-}
-
-h4 {
     font-size: 1.5rem;
-    letter-spacing: 0.25rem;
-    padding-bottom: 1.125rem;
-    font-weight: normal;
-    font-family:'Alfa Slab One', Garamond, serif;
-    text-align:center;
-    color:darkred;
-    text-shadow:.09375rem .09375rem .09375rem #000;
-    text-transform: uppercase;
 }
 
-h5 {
-    font-size: 1rem;
-    margin-top: 0.25rem;
-    padding: 0.5rem;
-    font-weight: normal;
-    text-align:center;
-    color: #fff;
-    background-color: #333;
-}
-
-/* Section & Paragraph */
-
-section {
-    margin-top: 0.5rem;
+h2 + p {
+    
+    text-indent: 1.5rem;
 }
 
 p {
-    margin-top: 1rem;
-    margin-bottom: 1rem;
-    margin-left: auto;
-    margin-right: auto;
-    width: 90%;
-    text-align: left;
+    font-size: 0.75rem;
+    letter-spacing: 0.0313rem;
+    word-spacing: 0.125rem;
+    font-family: Montserrat;
 }
 
-/* Image & Figure */
-
-img {
-    width: 100%;
-    margin-top: 0;
-    margin-bottom: 0;
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 50rem;
-}
-
-figure {
-    margin-bottom: 2rem;
+li {
+    font-size: 0.75rem;
+    letter-spacing: 0.0313rem;
+    word-spacing: 0.125rem;
+    font-family: Montserrat;
 }
 
 figcaption {
-    padding-top: 0.5rem;
-    text-align: right;
+    font-size: 0.75rem;
+    margin-bottom: 2rem;
 }
 
-/* Footer */
+/* Link Styling */
+
+a {
+    outline: none;
+}
+
+a:visited,
+a:link { outline: none; color: #33658A}
+
+a:focus,
+a:hover { outline: none; text-decoration: none; }
+
+/* List Styling */
+
+ul {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    margin-left: 0rem;
+    margin-right: 0rem;
+    list-style-type: square;
+}
+
+ol {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    margin-left: 0rem;
+    margin-right: 0rem;
+    list-style-type: lower-alpha;
+}
+
+.long-list a:hover {text-transform: uppercase;}
+
+/* Navigation Menu */
+
+nav {
+    padding-left: 0rem; 
+    margin-top: 0.25rem;
+}
+
+nav a {
+    text-decoration: none;
+    display: inline-block;
+    width: 100%;
+    line-height: 3;
+    text-align: center;
+    font-size: 1.125rem;
+    margin-bottom: 1.5rem;
+    border: solid 0.0625rem #33658A;
+    font-family: Montserrat;
+}
+
+nav a:focus,
+nav a:hover {
+    color: #FFF;
+    background-color: #33658A;
+}
+
+nav a:active {
+    color: #FFF;
+    background-color: #000;
+}
+
+/* Footer Styles */
 
 footer {
-    padding: 1rem;
-    border-top-width: 2rem;
-    border-bottom-width: 0;
-    border-left-width: 0;
-    border-right-width: 0;
-    border-style: solid;
-    color: #333;
+    text-align: center;
 }
-
-span:first-child {
-    padding-bottom: 0;
-    padding-top: 0;
-    padding-left: 0.5rem;
-    padding-right: 0.5rem;
-  }
-
-span:last-child {
-    padding-bottom: 0;
-    padding-top: 0;
-    padding-left: 0.5rem;
-    padding-right: 0.5rem;
-  }
